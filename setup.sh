@@ -10,8 +10,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 # .zshrc
 # WILL OVERWRITE YOUR OLD ZSHRC
-rm -f ~/.zshrc
-cp ./.zshrc ~/.zshrc
+head -n 5 ~/.zshrc | cat - ./.zshrc > ~/.zshrc
 
 # danlliu's Oh-My-ZSH theme
 cp ./danlliu.zsh-theme $ZSH/custom/themes/danlliu.zsh-theme
